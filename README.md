@@ -1,9 +1,9 @@
 # MAS
 MAS stands for Modbus Attack Scripts.
 
-## read_all_holding_registries.py
+## read_all_holding_registers.py
 ```
-usage: read_all_holding_registries.py [-h] [-p PORT] [-u UID] [-sa START]
+usage: read_all_holding_registers.py [-h] [-p PORT] [-u UID] [-sa START]
                                       [-ea END]
                                       ip
 
