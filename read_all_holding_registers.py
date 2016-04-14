@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-File: read_all_holding_registries.py
-Desc: Read all holding registries from a TCP MODBUS Slave
+File: read_all_holding_registers.py
+Desc: Read all holding registers from a TCP MODBUS Slave
 Version: 0.0.2
 """
 
