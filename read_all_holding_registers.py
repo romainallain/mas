@@ -76,14 +76,21 @@ def scan():
     # TODO add ETA mechanism
     results = {}
     addr = 1
-    for addr in range(args.start_address, args.end_address):
-        hr = client.read_holding_registers(addr, 1, unit=args.uid) # unit value is device id of the slave (UID)
+    registers_tested = args.end_address - args.start_address + 1
+    if registers_tested = 1:
+        hr = client.read_holding_registers(args.start_address, 1, unit=args.uid) # unit value is device id of the slave (UID)
         if hr.function_code == 3: # if we succeed reading stuff
             results[addr] = hr.registers[0]
         # if it fails, hr.function = 131 (0x83), cf modbus doc
+    else:
+    	for addr in range(args.start_address, args.end_address):
+            hr = client.read_holding_registers(addr, 1, unit=args.uid) # unit value is device id of the slave (UID)
+            if hr.function_code == 3: # if we succeed reading stuff
+                results[addr] = hr.registers[0]
+            # if it fails, hr.function = 131 (0x83), cf modbus doc
 
     client.close()
-    print 'Register scanning is finished (%d registers were tried)' % (args.end_address-args.start_address+1)
+    print 'Register scanning is finished (%d registers were tried)' % (registers_tested)
     # sorting dict for printing
     ordered_results = collections.OrderedDict(sorted(results.items()))
     for addr, value in ordered_results.iteritems():
