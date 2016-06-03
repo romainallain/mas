@@ -1,6 +1,12 @@
 # MAS
 MAS stands for Modbus Attack Scripts.
 
+## Prerequisites
+```bash
+apt-get install python-pip python-dev
+pip install pymodbus
+```
+
 ## read_all_holding_registers.py
 ```
 usage: read_all_holding_registers.py [-h] [-p PORT] [-u UID] [-sa START]
