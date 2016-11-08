@@ -77,7 +77,7 @@ def scan():
     results = {}
     addr = 1
     registers_tested = args.end_address - args.start_address + 1
-    if registers_tested = 1:
+    if registers_tested == 1:
         hr = client.read_holding_registers(args.start_address, 1, unit=args.uid) # unit value is device id of the slave (UID)
         if hr.function_code == 3: # if we succeed reading stuff
             results[addr] = hr.registers[0]
