@@ -1,6 +1,8 @@
 # MAS
 MAS stands for Modbus Attack Scripts.
-Those were developed to assess security level of PLCs and network architectures. It can also be used to test network filtering rules (DPI, Tofino firewalls...).
+
+They were developed to assess security level of PLCs and network architectures. It can also be used to test network filtering rules (DPI, Modbus-aware firewalls...).
+
 3 scripts are available now:
 - `read_all_holding_registers.py`, used to scan and get values from holding registers on a TCP Modbus Slave;
 - `write_all_holding_registers.py`, used to write a specific value to one or multiple holding registers of a TCP Modbus Slave;
